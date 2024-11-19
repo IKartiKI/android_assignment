@@ -16,3 +16,7 @@ This project is a Flutter-based Android application that collects user inputs th
    ```bash
    git clone https://github.com/yourusername/android_assignment.git
    cd android_assignment
+2. Run the project:
+   ```bash
+   flutter pub get  
+   flutter run  
