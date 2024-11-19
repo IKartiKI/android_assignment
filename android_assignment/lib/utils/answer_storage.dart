@@ -11,10 +11,10 @@ class AnswerStorage {
     try {
       final directory = await getApplicationDocumentsDirectory();
       final path = '${directory.path}/answers.json';
-      print("Using file path: $path"); // Debug: Log the file path
+      print("Using file path: $path");
       return path;
     } catch (e) {
-      print("Error getting file path: $e"); // Debug: Log any path errors
+      print("Error getting file path: $e");
       return '';
     }
   }
@@ -30,12 +30,12 @@ class AnswerStorage {
         return;
       }
 
-      print("Saving answers: $answers"); // Debug: Log answers before saving
+      print("Saving answers: $answers");
 
       await file.writeAsString(jsonEncode(answers));
-      print("Answers successfully saved at $path"); // Debug: Confirm save
+      print("Answers successfully saved at $path");
     } catch (e) {
-      print("Error saving answers: $e"); // Debug: Log any error during save
+      print("Error saving answers: $e");
     }
   }
 
@@ -43,8 +43,7 @@ class AnswerStorage {
     try {
       final path = await _getFilePath();
       if (path.isEmpty) {
-        print(
-            "File path is empty, cannot load answers."); // Check if path retrieval failed
+        print("File path is empty, cannot load answers.");
         return {};
       }
       final file = File(path);
@@ -53,14 +52,14 @@ class AnswerStorage {
       if (await file.exists()) {
         final contents = await file.readAsString();
         final data = jsonDecode(contents);
-        print("Loaded data from file: $data"); // Debug: Log loaded data
+        print("Loaded data from file: $data");
         return data;
       } else {
-        print("File not found at $path"); // Debug: Log if file does not exist
+        print("File not found at $path");
         return {}; // Returning empty map if file does not exist
       }
     } catch (e) {
-      print("Error loading answers: $e"); // Debug: Log any error during load
+      print("Error loading answers: $e");
       return {}; // Returning empty map on error
     }
   }

@@ -32,7 +32,7 @@ class _SelfiePageState extends State<SelfiePage> {
     if (_controller != null) {
       final image = await _controller!.takePicture();
       setState(() {
-        _capturedImage = image; // Save the captured image for preview
+        _capturedImage = image; // Saving the captured image for preview
       });
     }
   }
@@ -80,7 +80,6 @@ class _SelfiePageState extends State<SelfiePage> {
                   onPressed: _capturedImage != null
                       ? () {
                           Navigator.pushNamed(context, '/submit');
-                          // Optionally handle submission logic here
                         }
                       : null, // Disable submit if no selfie captured
                 ),

@@ -31,11 +31,10 @@ class _ResultPageState extends State<ResultPage> {
     return Scaffold(
       appBar: AppBar(title: Text('Submission Results')),
       body: FutureBuilder<Map<String, dynamic>>(
-        future: loadResults(), // Call loadResults to fetch data
+        future: loadResults(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(
-                child: CircularProgressIndicator()); // Loading indicator
+            return Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
             return Center(
                 child: Text('Error loading results: ${snapshot.error}'));
@@ -67,12 +66,11 @@ class _ResultPageState extends State<ResultPage> {
                       children: [
                         Text(resultData["Q1"].toString()),
                         Text(resultData["Q2"].toString()),
-                        Image.file(
-                            File(resultData["Q3"])), // Show the saved image
+                        Image.file(File(resultData["Q3"])),
                         AudioPlayerWidget(
                           resultData["recordedAudio"],
                           audioPath: '',
-                        ), // Custom widget for audio playback
+                        ),
                         Text(resultData["gps"]),
                         Text(resultData["submitTime"]),
                       ],
