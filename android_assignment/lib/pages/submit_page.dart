@@ -8,7 +8,7 @@ class SubmitPage extends StatelessWidget {
   SubmitPage({required this.answers});
 
   void _submitAnswers(BuildContext context) async {
-    // Add the current time to answers
+    // Adding the current time to answers
     answers["submit_time"] =
         DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now());
 

@@ -12,9 +12,7 @@ class _ResultPageState extends State<ResultPage> {
   String imagePath = 'path/to/saved/image.png'; // Replace with actual path
   String audioPath = 'path/to/saved/audio.wav'; // Replace with actual path
 
-  // Simulate data loading (replace with actual data fetching if needed)
   Future<Map<String, dynamic>> loadResults() async {
-    // Add a small delay for demonstration, replace with actual data loading
     await Future.delayed(Duration(seconds: 1));
 
     // Simulate results

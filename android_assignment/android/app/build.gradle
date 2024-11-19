@@ -48,7 +48,7 @@ android {
 
 configurations.all {
     resolutionStrategy {
-        force "org.jetbrains.kotlin:kotlin-stdlib:1.7.10" // Or the version you are using
+        force "org.jetbrains.kotlin:kotlin-stdlib:1.7.10"
     }
 }
 

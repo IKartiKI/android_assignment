@@ -26,8 +26,7 @@ class AnswerStorage {
       final file = File(path);
       print("Trying to write to: $path");
       if (path.isEmpty) {
-        print(
-            "File path is empty, aborting save."); // Check if path retrieval failed
+        print("File path is empty, aborting save.");
         return;
       }
 

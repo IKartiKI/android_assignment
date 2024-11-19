@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // Define named routes for each page
+      // Defining named routes for each page
       initialRoute: '/gender',
       routes: {
         '/gender': (context) => GenderSelectionPage(),
